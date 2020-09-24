@@ -12,7 +12,7 @@ export default function App() {
   });
   const getDeals = async ()=>{
     try{
-      const response = await fetch('http://localhost:3000/deals');
+      const response = await fetch('https://deals-app-api.herokuapp.com/deals');
       const data = await response.json();
       setDeals(data)
     }catch(error){
@@ -37,7 +37,7 @@ export default function App() {
     event.preventDefault();
     try {
       const response = await axios.post(
-        'http://localhost:3000/deals',
+        'https://deals-app-api.herokuapp.com/deals',
         formInputs
       );
       const createdDeal = response.data
